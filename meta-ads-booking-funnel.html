@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade Flow — Get 100+ Qualified Roof Restoration Leads Per Month</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --blue: #1c91bb;
+  --blue-dark: #001d3d;
+  --blue-mid: #003566;
+  --green: #61ce70;
+  --green-dark: #4caf50;
+  --gray: #9ca3af;
+  --gray-light: #d1d5db;
+  --dark: #0a0f1a;
+  --dark-card: #0f1524;
+  --dark-surface: #111827;
+  --dark-border: rgba(255,255,255,0.06);
+  --white: #f9fafb;
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--gray);
+  background: var(--dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.container-wide { max-width: 1170px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 16px 0;
+  background: rgba(10, 15, 26, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.nav-content {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1170px; margin: 0 auto; padding: 0 24px;
+}
+
+.logo { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800; letter-spacing: 0.08em; }
+.logo-text { color: var(--white); }
+.logo-accent { color: var(--blue); }
+
+.nav-cta {
+  background: var(--blue); color: var(--white);
+  font-family: var(--font-body); font-weight: 600; font-size: 0.8rem;
+  padding: 10px 24px; border: none; cursor: pointer;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+.nav-cta:hover { background: var(--green); color: var(--dark); }
+
+/* ===== HERO ===== */
+.hero {
+  padding: 120px 0 80px;
+  position: relative;
+  text-align: center;
+}
+
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 30%, rgba(28,145,187,0.1) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 80%, rgba(97,206,112,0.04) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(28,145,187,0.1);
+  border: 1px solid rgba(28,145,187,0.3);
+  color: var(--blue);
+  font-size: 0.75rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  padding: 8px 20px; margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem; font-weight: 800;
+  color: var(--white); line-height: 1.15;
+  margin-bottom: 20px; letter-spacing: 0.02em;
+  max-width: 800px; margin-left: auto; margin-right: auto;
+}
+
+.hero h1 .highlight { color: var(--green); }
+
+.hero-sub {
+  font-size: 1.05rem; color: var(--gray); line-height: 1.7;
+  max-width: 600px; margin: 0 auto 36px;
+}
+
+.hero-proof {
+  font-size: 0.85rem; color: var(--gray-light);
+  margin-top: 16px;
+}
+
+.hero-proof span { color: var(--green); font-weight: 600; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block; font-family: var(--font-body);
+  font-weight: 700; font-size: 0.9rem;
+  padding: 16px 40px; border: none; cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
+
+.btn-primary {
+  background: var(--green); color: var(--dark);
+}
+.btn-primary:hover {
+  background: #7ddb8a; transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(97,206,112,0.25);
+}
+
+.btn-secondary {
+  background: var(--blue); color: var(--white);
+}
+.btn-secondary:hover {
+  background: #22a8d6; transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(28,145,187,0.25);
+}
+
+/* ===== PROBLEM SECTION ===== */
+.problem {
+  padding: 80px 0;
+  position: relative;
+  background: var(--dark-card);
+}
+
+.problem::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dark-border), transparent);
+}
+
+.problem-content { text-align: center; max-width: 700px; margin: 0 auto; }
+
+.section-label {
+  font-size: 0.75rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.2em;
+  color: var(--blue); margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--white); line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.pain-list {
+  list-style: none; text-align: left;
+  max-width: 600px; margin: 0 auto 36px;
+}
+
+.pain-list li {
+  padding: 14px 0 14px 36px;
+  position: relative;
+  font-size: 0.95rem; color: var(--gray);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.pain-list li::before {
+  content: '✕'; position: absolute; left: 0;
+  color: #e93d3d; font-weight: 700; font-size: 0.9rem;
+}
+
+.pain-list li:last-child { border-bottom: none; }
+
+/* ===== HOW IT WORKS ===== */
+.how-it-works {
+  padding: 80px 0;
+  position: relative;
+}
+
+.how-it-works::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dark-border), transparent);
+}
+
+.section-header { text-align: center; max-width: 700px; margin: 0 auto 56px; }
+
+.steps-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  margin-bottom: 48px;
+}
+
+.step-card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  padding: 40px 28px; text-align: center;
+  position: relative; transition: all 0.4s ease;
+}
+
+.step-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 2px; background: var(--blue);
+  transform: scaleX(0); transition: transform 0.4s ease;
+}
+
+.step-card:hover::before { transform: scaleX(1); }
+.step-card:hover { border-color: rgba(28,145,187,0.2); }
+
+.step-number {
+  font-family: var(--font-heading);
+  font-size: 2rem; font-weight: 800;
+  color: var(--blue); margin-bottom: 16px;
+  opacity: 0.3;
+}
+
+.step-card h3 {
+  font-family: var(--font-heading);
+  font-size: 0.8rem; font-weight: 600;
+  color: var(--white); text-transform: uppercase;
+  letter-spacing: 0.1em; margin-bottom: 12px;
+}
+
+.step-card p {
+  font-size: 0.88rem; color: var(--gray); line-height: 1.6;
+}
+
+/* ===== RESULTS / STATS ===== */
+.results {
+  padding: 80px 0;
+  background: var(--dark-card);
+  position: relative;
+}
+
+.results::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dark-border), transparent);
+}
+
+.stats-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  margin-bottom: 48px;
+}
+
+.stat-card {
+  background: var(--dark); border: 1px solid var(--dark-border);
+  padding: 36px 28px; text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover { border-color: rgba(28,145,187,0.2); }
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 2rem; font-weight: 700;
+  color: var(--blue); margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.78rem; color: var(--gray);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+/* Testimonial */
+.testimonial-card {
+  background: var(--dark); border: 1px solid var(--dark-border);
+  padding: 36px; max-width: 600px; margin: 0 auto;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"'; position: absolute; top: 16px; left: 24px;
+  font-size: 3rem; color: rgba(28,145,187,0.15);
+  font-family: Georgia, serif; line-height: 1;
+}
+
+.testimonial-card p {
+  font-size: 0.95rem; color: var(--gray-light);
+  line-height: 1.7; font-style: italic;
+  margin-bottom: 16px; padding-top: 8px;
+}
+
+.testimonial-name {
+  font-family: var(--font-heading);
+  font-size: 0.7rem; font-weight: 600;
+  color: var(--white); text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.testimonial-role {
+  font-size: 0.8rem; color: var(--blue);
+}
+
+/* ===== COMPARISON ===== */
+.comparison {
+  padding: 80px 0;
+  position: relative;
+}
+
+.comparison::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dark-border), transparent);
+}
+
+.compare-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  max-width: 800px; margin: 0 auto;
+}
+
+.compare-card {
+  padding: 40px 32px;
+  border: 1px solid var(--dark-border);
+}
+
+.compare-card.bad {
+  background: var(--dark-card);
+}
+
+.compare-card.good {
+  background: rgba(28,145,187,0.04);
+  border-color: rgba(28,145,187,0.3);
+}
+
+.compare-card h3 {
+  font-family: var(--font-heading);
+  font-size: 0.75rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.compare-card.bad h3 { color: #e93d3d; }
+.compare-card.good h3 { color: var(--green); }
+
+.compare-list {
+  list-style: none;
+}
+
+.compare-list li {
+  padding: 10px 0; font-size: 0.88rem;
+  border-bottom: 1px solid var(--dark-border);
+  color: var(--gray);
+}
+
+.compare-list li:last-child { border-bottom: none; }
+
+.compare-card.bad .compare-list li::before {
+  content: '✕ '; color: #e93d3d; font-weight: 600;
+}
+
+.compare-card.good .compare-list li::before {
+  content: '✓ '; color: var(--green); font-weight: 600;
+}
+
+/* ===== GUARANTEE ===== */
+.guarantee {
+  padding: 80px 0;
+  background: var(--dark-card);
+  position: relative;
+  text-align: center;
+}
+
+.guarantee::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dark-border), transparent);
+}
+
+.guarantee-box {
+  max-width: 600px; margin: 0 auto;
+  border: 1px solid rgba(97,206,112,0.3);
+  background: rgba(97,206,112,0.03);
+  padding: 48px 36px;
+}
+
+.guarantee-icon {
+  font-size: 2.5rem; margin-bottom: 20px;
+}
+
+.guarantee-box h3 {
+  font-family: var(--font-heading);
+  font-size: 0.9rem; font-weight: 600;
+  color: var(--green); text-transform: uppercase;
+  letter-spacing: 0.1em; margin-bottom: 16px;
+}
+
+.guarantee-box p {
+  font-size: 0.95rem; color: var(--gray); line-height: 1.7;
+}
+
+/* ===== FAQ ===== */
+.faq {
+  padding: 80px 0;
+  position: relative;
+}
+
+.faq::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--dark-border), transparent);
+}
+
+.faq-list {
+  max-width: 700px; margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.faq-question {
+  width: 100%; background: none; border: none;
+  color: var(--white); font-family: var(--font-body);
+  font-size: 0.92rem; font-weight: 600;
+  text-align: left; padding: 20px 0;
+  cursor: pointer; display: flex;
+  justify-content: space-between; align-items: center;
+}
+
+.faq-question::after {
+  content: '+'; color: var(--blue);
+  font-size: 1.2rem; font-weight: 700;
+  transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding-bottom: 20px;
+}
+
+.faq-answer p {
+  font-size: 0.88rem; color: var(--gray); line-height: 1.7;
+}
+
+/* ===== FINAL CTA ===== */
+.final-cta {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.final-cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(28,145,187,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.final-cta .section-title {
+  font-size: 1.8rem; margin-bottom: 16px;
+}
+
+.final-cta .body-text {
+  max-width: 500px; margin: 0 auto 36px;
+  font-size: 1rem; line-height: 1.7;
+}
+
+.final-cta .btn { font-size: 1rem; padding: 18px 48px; }
+
+.urgency-text {
+  font-size: 0.8rem; color: var(--gray);
+  margin-top: 16px;
+}
+
+.urgency-text strong { color: var(--blue); }
+
+/* ===== FOOTER ===== */
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--dark-border);
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.75rem; color: rgba(255,255,255,0.2);
+  letter-spacing: 0.05em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.6rem; }
+  .hero { padding: 100px 0 60px; }
+  .steps-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 48px; }
+  .stats-row { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 48px; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 1.3rem; }
+  .stat-number { font-size: 1.6rem; }
+  .btn { padding: 14px 32px; font-size: 0.85rem; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.35rem; }
+  .nav-cta { padding: 8px 16px; font-size: 0.7rem; }
+  .hero-badge { font-size: 0.65rem; padding: 6px 14px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="nav-content">
+    <div class="logo">
+      <span class="logo-text">TRADE</span><span class="logo-accent">FLOW</span>
+    </div>
+    <a href="#book" class="nav-cta" onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'});return false;">Book a Call →</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">For Roof Restoration & Rejuvenation Contractors</div>
+    <h1>Get <span class="highlight">100+ Qualified Leads</span> Per Month Without Spending A Dime On Ads</h1>
+    <p class="hero-sub">Exclusive, human-verified leads delivered to your zip codes. Pay only for leads that book. No retainers. No shared leads. No BS.</p>
+    <p class="hero-proof"><span>✓</span> 60+ active contractors &nbsp;|&nbsp; <span>✓</span> Exclusive territories &nbsp;|&nbsp; <span>✓</span> Leads in 3-5 days</p>
+    <!-- iClosed inline widget begin -->
+    <div id="book" class="iclosed-widget" data-url="https://app.iclosed.io/e/tradeflow/trade-flow-intro-call" title="Trade Flow Intro Call" style="width: 100%; height: 620px; margin-top: 24px;"></div>
+    <script type="text/javascript" src="https://app.iclosed.io/assets/widget.js" async></script>
+    <!-- iClosed inline widget end -->
+  </div>
+</section>
+
+<!-- ===== PROBLEM ===== -->
+<section class="problem">
+  <div class="container">
+    <div class="problem-content">
+      <div class="section-label">Sound Familiar?</div>
+      <h2 class="section-title">You're Paying For Leads That Go Nowhere</h2>
+      <ul class="pain-list">
+        <li>Spending $2,000+/month on ads with unpredictable results</li>
+        <li>Getting shared leads that 5 other roofers also received</li>
+        <li>Corporate advertising programs promising the world, delivering 4 leads a month</li>
+        <li>Wasting hours chasing unqualified "leads" that never answer</li>
+        <li>Locked into monthly retainers with nothing to show for it</li>
+      </ul>
+      <p class="body-text" style="text-align:center;">You don't need more marketing. You need <strong style="color:var(--white);">leads that actually close.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Qualified Leads In 3 Simple Steps</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">01</div>
+        <h3>Claim Your Territory</h3>
+        <p>We lock down exclusive zip codes just for you. No other contractor in your area gets access. Your leads are yours alone.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">02</div>
+        <h3>We Generate &amp; Qualify</h3>
+        <p>Our team runs the campaigns and our qualifiers call every lead. Only homeowners with confirmed roof type, age, and intent get through.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">03</div>
+        <h3>You Close The Jobs</h3>
+        <p>Booked inspections land in your calendar. Show up, close the deal. One job pays for months of leads.</p>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <a href="#book" class="btn btn-secondary" onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'});return false;">Start Getting Leads →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section class="results">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">The Numbers</div>
+      <h2 class="section-title">Results That Speak For Themselves</h2>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Qualified Leads<br>Per Month</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">60+</div>
+        <div class="stat-label">Active Contractors<br>Across The US</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">3-5</div>
+        <div class="stat-label">Days From Onboarding<br>To First Lead</div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <p>"I've been very pleased working with this team. The leads they have generated have been well qualified and their communication has been excellent. I am happy to have them on my team."</p>
+      <div class="testimonial-name">Angie Valentine-Rohlman</div>
+      <div class="testimonial-role">Verified on Trustpilot</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPARISON ===== -->
+<section class="comparison">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Why TradeFlow</div>
+      <h2 class="section-title">Not All Lead Gen Is Created Equal</h2>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-card bad">
+        <h3>Typical Lead Gen</h3>
+        <ul class="compare-list">
+          <li>Shared leads — 5 roofers compete</li>
+          <li>Monthly retainer regardless of results</li>
+          <li>Raw data dumps — no qualification</li>
+          <li>No territorial protection</li>
+          <li>Long contracts &amp; minimum spend</li>
+        </ul>
+      </div>
+      <div class="compare-card good">
+        <h3>TradeFlow</h3>
+        <ul class="compare-list">
+          <li>Exclusive leads — only you get them</li>
+          <li>Pay per qualified lead, nothing more</li>
+          <li>Human-verified by phone before delivery</li>
+          <li>Locked zip code territories</li>
+          <li>No contracts, no minimums</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GUARANTEE ===== -->
+<section class="guarantee">
+  <div class="container">
+    <div class="guarantee-box">
+      <div class="guarantee-icon">🛡️</div>
+      <h3>Lead Quality Guarantee</h3>
+      <p>Every lead is phone-verified before it reaches you. If a lead is unresponsive, has the wrong roof type, or doesn't qualify — <strong style="color:var(--white);">we replace it. Free.</strong> You only pay for leads that are ready to book an inspection.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Questions</div>
+      <h2 class="section-title">Got Questions? We've Got Answers</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">How much does it cost per lead?</button>
+        <div class="faq-answer"><p>We have two pricing tiers depending on your market and volume. On our standard plan, leads start at $97/qualified lead. On the premium plan with higher volume, it's $197/lead. There's a small one-time setup fee to configure your campaigns — no monthly retainers.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Are these leads exclusive to me?</button>
+        <div class="faq-answer"><p>Yes — 100%. We lock down your zip codes so no other contractor in the TradeFlow network receives leads from your territory. What's yours stays yours.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How fast until I start getting leads?</button>
+        <div class="faq-answer"><p>Onboarding takes 3-5 business days. Most contractors see their first qualified leads within 2-4 days after campaigns go live.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What if a lead is bad?</button>
+        <div class="faq-answer"><p>We replace it — no questions asked. Every lead is phone-verified by our human qualification team before it reaches you. If for any reason it doesn't meet our standard, you get a free replacement.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What industries do you work with?</button>
+        <div class="faq-answer"><p>We specialize in roof restoration, roof rejuvenation (including Roof Maxx dealers), and exterior services — roofing, pressure washing, gutter, and fencing contractors.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is there a contract or minimum commitment?</button>
+        <div class="faq-answer"><p>No contracts. No minimum spend. No monthly commitment. You pay per qualified lead, period. We earn your business every single day.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta" id="book">
+  <div class="container">
+    <div class="section-label">Ready To Scale?</div>
+    <h2 class="section-title">Stop Buying Leads.<br>Start Closing Jobs.</h2>
+    <p class="body-text">Book a 15-minute strategy call. We'll show you exactly how many qualified leads your territory can produce — and how fast we can get them flowing.</p>
+    <a href="#book" class="btn btn-primary" onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'});return false;">Book Your Strategy Call →</a>
+    <p class="urgency-text"><strong>Limited territories available</strong> — once your zip codes are taken, they're gone.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<section class="footer">
+  <div class="container">
+    <p>© 2026 TradeFlow. All rights reserved.</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ACCORDION JS ===== -->
+<script>
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) item.classList.add('active');
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</body>
+</html>
