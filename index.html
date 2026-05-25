@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Call Is Confirmed — TradeFlow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --bg-card: #12121a;
+      --bg-card-hover: #1a1a25;
+      --blue: #1C91BB;
+      --green: #61CE70;
+      --red: #e53e3e;
+      --white: #ffffff;
+      --gray: #94a3b8;
+      --light-gray: #cbd5e1;
+      --border: #1e293b;
+      --font-heading: 'Orbitron', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .container-wide {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Logo */
+    .logo-section {
+      padding: 30px 0;
+      text-align: center;
+    }
+    .logo-section img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    /* Step headings */
+    .step-heading {
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+    .step-heading h1 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 1px;
+    }
+
+    /* Video container */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      margin: 20px 0;
+      border: 1px solid var(--border);
+    }
+    .video-wrapper iframe,
+    .video-wrapper .video-poster {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+    .video-wrapper iframe {
+      border: none;
+    }
+    .video-poster {
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .play-overlay {
+      width: 64px; height: 64px;
+      background: rgba(28, 145, 187, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+    .play-overlay:hover { transform: scale(1.1); }
+    .play-overlay svg { margin-left: 4px; }
+
+    /* Warning */
+    .warning-section {
+      background: linear-gradient(135deg, rgba(229, 62, 62, 0.1), rgba(229, 62, 62, 0.05));
+      border: 1px solid rgba(229, 62, 62, 0.3);
+      border-left: 4px solid var(--red);
+      padding: 24px 28px;
+      margin: 30px 0;
+    }
+    .warning-section strong { color: var(--red); }
+    .warning-section p {
+      color: var(--light-gray);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Calendar section */
+    .calendar-section {
+      text-align: center;
+      padding: 40px 0;
+    }
+    .calendar-section h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .calendar-section .sub-text {
+      color: var(--light-gray);
+      margin-bottom: 20px;
+    }
+    .calendar-section img {
+      max-width: 100%;
+      border: 1px solid var(--border);
+    }
+
+    /* Section divider */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    /* Success stories */
+    .success-heading {
+      text-align: center;
+      padding: 40px 0 30px;
+    }
+    .success-heading h1 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 1px;
+    }
+
+    /* Testimonial card */
+    .testimonial-block {
+      margin: 30px 0;
+    }
+    .testimonial-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+    .testimonial-video iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .testimonial-text {
+      padding: 12px 0;
+    }
+    .testimonial-text strong {
+      color: var(--blue);
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .testimonial-text em {
+      color: var(--light-gray);
+      font-style: italic;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Trustpilot button */
+    .trustpilot-section {
+      text-align: center;
+      padding: 50px 0;
+    }
+    .btn-trustpilot {
+      display: inline-block;
+      background: var(--green);
+      color: #000;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 16px 40px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.2s;
+    }
+    .btn-trustpilot:hover {
+      background: #7ade7a;
+      transform: translateY(-1px);
+    }
+
+    /* Gallery */
+    .gallery-section {
+      padding: 40px 0 60px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--border);
+    }
+
+    /* Trustpilot screenshots grid */
+    .trustpilot-screenshots {
+      padding: 0 0 40px;
+    }
+    .trustpilot-screenshots .section-label {
+      text-align: center;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .trustpilot-screenshots h2 {
+      text-align: center;
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    .tp-screenshot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .tp-screenshot-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .tp-screenshot-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .tp-screenshot-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .tp-screenshot-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .step-heading h1 { font-size: 1.3rem; }
+      .success-heading h1 { font-size: 1.3rem; }
+      .calendar-section h2 { font-size: 1.1rem; }
+      .warning-section { padding: 18px 20px; }
+      .warning-section p { font-size: 0.85rem; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .step-heading h1 { font-size: 1.1rem; }
+      .success-heading h1 { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div class="logo-section">
+    <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/68fae2b6304c6efa8472ace6.png" alt="TradeFlow">
+  </div>
+
+  <!-- Step #1 -->
+  <div class="container">
+    <div class="step-heading">
+      <h1>Step #1: Watch This First</h1>
+    </div>
+    <div class="video-wrapper">
+      <iframe src="https://fast.wistia.net/embed/iframe/khtjxjajxr?version=v1" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <!-- Warning -->
+  <div class="container">
+    <div class="warning-section">
+      <p><strong>Warning:</strong> Successful People Value Time More Than Anything Else! Therefore, We Do Not Reschedule! I Will Never Ask Myself or My Team to Work With Anyone Who Does Not Feel The Same Level of Honour &amp; Commitment</p>
+    </div>
+  </div>
+
+  <!-- Add To Calendar -->
+  <div class="container">
+    <div class="calendar-section">
+      <h2>Add The Call To Your Calendar</h2>
+      <p class="sub-text">Make sure you do this so that the call appears on your calendar so you do not miss it</p>
+      <img src="calendar-blurred.png" alt="Add to Calendar">
+    </div>
+  </div>
+
+  <div class="container"><hr class="section-divider"></div>
+
+  <!-- Step #2 -->
+  <div class="container">
+    <div class="step-heading">
+      <h1>Step #2: Get Your Questions Answered Before The Call</h1>
+    </div>
+  </div>
+
+  <div class="container"><hr class="section-divider"></div>
+
+  <!-- Step #3: Success Stories -->
+  <div class="container">
+    <div class="success-heading">
+      <h1>Step #3: Check Out Our Success Stories</h1>
+    </div>
+  </div>
+
+  <!-- Tony -->
+  <div class="container">
+    <div class="testimonial-block">
+      <div class="testimonial-video">
+        <iframe src="https://fast.wistia.net/embed/iframe/i6ej1t7hh0?version=v1" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="testimonial-text">
+        <p><strong>Tony's Experience:</strong> <em>"I was struggling to get leads for my business... leads have been top notch, and when I say top notch, those people have been home, they've been waiting for my call, and they know why I'm calling. And I've been able to close a good number of deals because of it."</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conlan -->
+  <div class="container">
+    <div class="testimonial-block">
+      <div class="testimonial-video">
+        <iframe src="https://fast.wistia.net/embed/iframe/re621lbzjl?version=v1" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="testimonial-text">
+        <p><strong>Conlan was paying marketing companies $1000's per month:</strong> <em>"It was frustrating spending that kind of money and still chasing people who weren't even serious... I started working with TradeFlow, everything changed. The leads are qualified. That alone has improved my close rate and saved me a ton of time."</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logan -->
+  <div class="container">
+    <div class="testimonial-block">
+      <div class="testimonial-video">
+        <iframe src="https://fast.wistia.net/embed/iframe/v6nj3k94e9?version=v1" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="testimonial-text">
+        <p><strong>Logan's Fast Track to 200k:</strong> <em>"Before TradeFlow, I didn't really have a business. I was just starting out... here I am now less than a year later, and I've already had two hundred thousand dollars in jobs."</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Will -->
+  <div class="container">
+    <div class="testimonial-block">
+      <div class="testimonial-video">
+        <iframe src="https://fast.wistia.net/embed/iframe/qthyfj782o?version=v1" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="testimonial-text">
+        <p><strong>Will's journey to 20k months:</strong> <em>"I needed someone to take over advertising just because I didn't have the time to do it myself... I've more than doubled my revenue since starting. I do consistent twenty thousand dollar months now. I've also never lost money."</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Raymond -->
+  <div class="container">
+    <div class="testimonial-block">
+      <div class="testimonial-video">
+        <iframe src="https://fast.wistia.net/embed/iframe/1hx0qwgjjj?version=v1" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="testimonial-text">
+        <p><strong>Raymond from a couple customers to 80% close rate:</strong> <em>"When I first started with TradeFlow... I only had a couple of customers... I'm closing eighty percent of my leads, almost 100%. My business has really picked up since getting with Trade Flow. So if you work with TradeFlow, they will get you the business."</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Matthew -->
+  <div class="container">
+    <div class="testimonial-block">
+      <div class="testimonial-video">
+        <iframe src="https://fast.wistia.net/embed/iframe/xyhooymku9?version=v1" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="testimonial-text">
+        <p><strong>How Matthew closed 17 out of his first 20 leads:</strong> <em>"Why I reached out was... I'm gonna need a good team behind me to keep things busy, as I need a regular influx of new leads. I've been working with them for over a month and a half now, probably twenty to thirty leads... I wanna say all of them, but like three have closed... It's been awesome. The leads have been genuinely better than I could have expected."</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TrustPilot Button -->
+  <div class="trustpilot-section">
+    <a href="https://au.trustpilot.com/review/tradeflowleads.com" target="_blank" class="btn-trustpilot">Check Our TrustPilot</a>
+  </div>
+
+  <!-- Trustpilot Screenshot Reviews -->
+  <div class="trustpilot-screenshots">
+    <div class="container-wide">
+      <div class="section-label">Verified Reviews</div>
+      <h2>What Our Clients Say On TrustPilot</h2>
+      <div class="tp-screenshot-grid">
+        <div class="tp-screenshot-card"><img src="testimonials/testimonial-1.png" alt="Frankie Mandonado - Trustpilot Review" loading="lazy"></div>
+        <div class="tp-screenshot-card"><img src="testimonials/testimonial-2.png" alt="Steve Elkinton - Trustpilot Review" loading="lazy"></div>
+        <div class="tp-screenshot-card"><img src="testimonials/testimonial-3.png" alt="Angie Valentine-Rohlman - Trustpilot Review" loading="lazy"></div>
+        <div class="tp-screenshot-card"><img src="testimonials/testimonial-4.png" alt="Adam Rivon - Trustpilot Review" loading="lazy"></div>
+        <div class="tp-screenshot-card"><img src="testimonials/testimonial-5.png" alt="Gab - Trustpilot Review" loading="lazy"></div>
+        <div class="tp-screenshot-card"><img src="testimonials/testimonial-6.png" alt="Finn Russell - Trustpilot Review" loading="lazy"></div>
+        <div class="tp-screenshot-card"><img src="testimonials/testimonial-7.png" alt="Veterans Vision - Trustpilot Review" loading="lazy"></div>
+        <div class="tp-screenshot-card"><img src="testimonials/testimonial-8.png" alt="Josh Jenkins - Trustpilot Review" loading="lazy"></div>
+        <div class="tp-screenshot-card"><img src="testimonials/testimonial-9.png" alt="Jayce Rzechula - Trustpilot Review" loading="lazy"></div>
+        <div class="tp-screenshot-card"><img src="testimonials/testimonial-10.png" alt="Conlan Galvez - Trustpilot Review" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery-section">
+    <div class="container-wide">
+      <!-- Row 1 -->
+      <div class="gallery-grid">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/68431a26560d2d45a5c94cc7.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/68431a264cd9dad3a7debdec.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/684498ed19da18ae43bfc0fa.png" alt="" loading="lazy">
+      </div>
+      <!-- Row 2 -->
+      <div class="gallery-grid">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/684498ed056910fdf5cefacb.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/6865683a987e87f6333b487d.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/68656889987e87a5343b49e6.png" alt="" loading="lazy">
+      </div>
+      <!-- Row 3 -->
+      <div class="gallery-grid">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/68656897dbe4a58c17b630a4.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/688ce7b65de01755a2a1e17d.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/688ce7bb31b511533335aa1b.png" alt="" loading="lazy">
+      </div>
+      <!-- Row 4 -->
+      <div class="gallery-grid">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/68962cb26493727b07d10d5c.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/68921c114f8b90957eda757e.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/68921c107b1adbe9b30d0148.png" alt="" loading="lazy">
+      </div>
+      <!-- Row 5 -->
+      <div class="gallery-grid">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/68af61978fd7843cd44b3364.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/68af61975c255c5344222d5e.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/68962cb148d9ff0e301709e5.png" alt="" loading="lazy">
+      </div>
+      <!-- Row 6 -->
+      <div class="gallery-grid">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/690b860e7b2dc5f43336c511.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/690b860e6e306f9845603f89.png" alt="" loading="lazy">
+        <img src="https://storage.googleapis.com/msgsndr/ZOWRw3n6teeIeRZJyC7R/media/690b860e095b9ca0b8d263f3.png" alt="" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
