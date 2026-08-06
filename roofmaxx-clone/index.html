@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thomas Sharps | Roof Rejuvenation & Asphalt Shingle Restoration</title>
+<meta name="description" content="Save up to 80% vs. roof replacement. Thomas Sharps's plant-based roof rejuvenation restores your asphalt shingles, adding up to 5 years of life per treatment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===================== RESET & BASE ===================== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ===================== TYPOGRAPHY ===================== */
+h1, h2, h3, h4, h5 {
+  font-family: 'Oswald', 'Helvetica Neue Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 600;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+.section-tag {
+  font-family: 'Oswald', sans-serif;
+  font-size: .85rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #2d8f5e;
+  display: block;
+  margin-bottom: .5rem;
+}
+
+/* ===================== LAYOUT ===================== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+section { padding: 80px 0; }
+.text-center { text-align: center; }
+
+/* ===================== COLORS ===================== */
+:root {
+  --green: #2d8f5e;
+  --green-dark: #1f6b44;
+  --green-light: #3fb37f;
+  --blue: #1a6b8c;
+  --blue-dark: #0f4a63;
+  --dark: #1a1a1a;
+  --gray: #f5f5f5;
+  --gray-mid: #e0e0e0;
+  --white: #ffffff;
+}
+
+/* ===================== BUTTONS ===================== */
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 4px;
+}
+.btn-primary {
+  background: var(--green);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.2); }
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.btn-outline:hover { background: #fff; color: var(--dark); }
+.btn-large { padding: 18px 48px; font-size: 1.1rem; }
+
+/* ===================== HEADER ===================== */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  transition: all .3s ease;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 70px;
+}
+.logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.logo span { color: var(--blue); }
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.nav a {
+  font-family: 'Oswald', sans-serif;
+  font-size: .9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: #444;
+  transition: color .2s;
+}
+.nav a:hover { color: var(--green); }
+.header-phone {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  color: var(--blue);
+  white-space: nowrap;
+}
+.header-cta {
+  background: var(--green);
+  color: #fff !important;
+  padding: 10px 24px;
+  border-radius: 4px;
+  transition: background .2s;
+}
+.header-cta:hover { background: var(--green-dark); color: #fff; }
+.nav-toggle { display: none; font-size: 1.5rem; background: none; border: none; cursor: pointer; color: #333; }
+
+/* ===================== HERO ===================== */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding-top: 70px;
+  background: linear-gradient(135deg, rgba(15,74,99,.85) 0%, rgba(31,107,68,.75) 100%),
+    url('https://images.unsplash.com/photo-1572177812156-58036aae439c?w=1920&q=80') center/cover no-repeat;
+}
+.hero-content {
+  max-width: 720px;
+  color: #fff;
+}
+.hero-content h1 {
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,.3);
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  opacity: .95;
+}
+.hero-cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-family: 'Oswald', sans-serif;
+  font-size: .85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255,255,255,.25);
+}
+.hero-badge svg { width: 18px; height: 18px; }
+
+/* ===================== TRUST BAR ===================== */
+.trust-bar {
+  background: var(--dark);
+  color: #fff;
+  padding: 18px 0;
+}
+.trust-bar-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+.trust-item {
+  font-family: 'Oswald', sans-serif;
+  font-size: .95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.trust-item strong { color: var(--green-light); font-size: 1.4rem; }
+
+/* ===================== HOW IT WORKS ===================== */
+.how-it-works { background: var(--gray); }
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+.step-card {
+  background: #fff;
+  padding: 40px 28px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
+  transition: transform .3s, box-shadow .3s;
+}
+.step-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(0,0,0,.1); }
+.step-number {
+  width: 56px; height: 56px;
+  background: var(--green);
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+.step-card h3 { font-size: 1.15rem; margin-bottom: .75rem; }
+.step-card p { font-size: .9rem; color: #666; }
+
+/* ===================== BENEFITS ===================== */
+.benefits { background: #fff; }
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+.benefit-item {
+  text-align: center;
+  padding: 20px;
+}
+.benefit-icon {
+  width: 80px; height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
+  border-radius: 50%;
+  padding: 18px;
+}
+.benefit-icon svg { width: 100%; height: 100%; fill: #fff; }
+.benefit-item h3 { font-size: 1.2rem; margin-bottom: .75rem; }
+.benefit-item p { font-size: .95rem; color: #666; }
+
+/* ===================== COMPARISON ===================== */
+.comparison { background: var(--gray); }
+.comparison-table {
+  max-width: 900px;
+  margin: 50px auto 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+.comparison-table table { width: 100%; border-collapse: collapse; }
+.comparison-table th {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 20px 16px;
+  font-size: .9rem;
+  text-align: center;
+}
+.comparison-table thead tr {
+  background: var(--dark);
+  color: #fff;
+}
+.comparison-table thead th.highlight {
+  background: var(--green);
+  color: #fff;
+}
+.comparison-table td {
+  padding: 18px 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-mid);
+  font-size: .92rem;
+}
+.comparison-table td:first-child {
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: .85rem;
+  color: #444;
+}
+.comparison-table td.highlight-col {
+  background: rgba(45, 143, 94, .06);
+  font-weight: 600;
+}
+.comparison-table .check { color: var(--green); font-size: 1.3rem; }
+.comparison-table .x-mark { color: #cc3333; font-size: 1.3rem; }
+.comparison-table tbody tr:last-child td { border-bottom: none; }
+.price-tag { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.1rem; }
+.price-tag.savings { color: var(--green); }
+
+/* ===================== TESTIMONIAL ===================== */
+.testimonial {
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--green-dark) 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.testimonial::before {
+  content: '';
+  position: absolute;
+  top: -40px; left: -40px;
+  font-size: 200px;
+  opacity: .07;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+.testimonial-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.testimonial-quote-mark {
+  font-size: 4rem;
+  font-family: Georgia, serif;
+  color: var(--green-light);
+  margin-bottom: -10px;
+  display: block;
+}
+.testimonial-text {
+  font-size: 1.35rem;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+.testimonial-author {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.testimonial-role {
+  font-size: .9rem;
+  opacity: .8;
+  margin-top: .25rem;
+}
+.testimonial-stars {
+  color: #f5b84a;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 4px;
+}
+
+/* ===================== WARRANTY ===================== */
+.warranty {
+  background: #fff;
+  position: relative;
+}
+.warranty-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.warranty-text h2 { margin-bottom: 1.5rem; }
+.warranty-text p { margin-bottom: 1.25rem; color: #555; font-size: 1.05rem; }
+.warranty-features {
+  margin-top: 2rem;
+  display: grid;
+  gap: 16px;
+}
+.warranty-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.warranty-check {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: .85rem;
+}
+.warranty-feature span:last-child { font-size: .98rem; color: #444; padding-top: 3px; }
+.warranty-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,.12);
+}
+.warranty-image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ===================== STATS ===================== */
+.stats {
+  background: var(--green);
+  color: #fff;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+.stat-item .stat-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+.stat-item .stat-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: .9;
+  margin-top: .5rem;
+  display: block;
+}
+
+/* ===================== FINAL CTA ===================== */
+.final-cta {
+  background: linear-gradient(135deg, rgba(15,74,99,.9) 0%, rgba(31,107,68,.85) 100%),
+    url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=1920&q=80') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+.final-cta h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+.final-cta p {
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  opacity: .95;
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+  background: var(--dark);
+  color: #aaa;
+  padding: 60px 0 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand .logo { color: var(--green-light); margin-bottom: 1rem; font-size: 1.6rem; }
+.footer-brand p { font-size: .9rem; line-height: 1.7; color: #888; max-width: 320px; }
+.footer-col h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.footer-col ul li { margin-bottom: .6rem; }
+.footer-col ul li a { font-size: .88rem; color: #999; transition: color .2s; }
+.footer-col ul li a:hover { color: var(--green-light); }
+.footer-contact p { font-size: .88rem; color: #999; margin-bottom: .5rem; }
+.footer-contact p strong { color: #ddd; }
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding: 20px 0;
+  text-align: center;
+  font-size: .82rem;
+  color: #666;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 980px) {
+  .nav { display: none; }
+  .nav-toggle { display: block; }
+  .nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: #fff;
+    padding: 20px;
+    gap: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .warranty-inner { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  section { padding: 60px 0; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .comparison-table { font-size: .82rem; }
+  .comparison-table td, .comparison-table th { padding: 12px 8px; }
+  .hero { min-height: 80vh; }
+  .hero-cta-group { flex-direction: column; }
+  .hero-cta-group .btn { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========================= HEADER ========================= -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">Thomas Sharps<span>NAME</span></a>
+    <nav class="nav" id="mainNav">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#comparison">Compare</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#warranty">Warranty</a>
+      <a href="tel:[PHONE]" class="header-phone">[PHONE]</a>
+      <a href="#estimate" class="header-cta">Get Free Estimate</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+  </div>
+</header>
+
+<!-- ========================= HERO ========================= -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7l-9-5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        America's Most Trusted Roofer&trade;
+      </div>
+      <h1>Save Your Roof.<br>Save Your Money.</h1>
+      <p>From roof to foundation, the damage caused by an old leaky roof can be devastating for your home. With Thomas Sharps, you get new-roof protection without the high cost and hassles of a life-disrupting replacement.</p>
+      <div class="hero-cta-group">
+        <a href="#estimate" class="btn btn-primary btn-large">Get Free Estimate</a>
+        <a href="#how-it-works" class="btn btn-outline btn-large">See How It Works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= TRUST BAR ========================= -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><strong>5 Years</strong> Added Per Treatment</div>
+      <div class="trust-item"><strong>80%</strong> Savings vs. Replacement</div>
+      <div class="trust-item"><strong>600+</strong> Cities Served</div>
+      <div class="trust-item"><strong>100%</strong> Plant-Based Formula</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================= HOW IT WORKS ========================= -->
+<section class="how-it-works" id="how-it-works">
+  <div class="container text-center">
+    <span class="section-tag">Simple Process</span>
+    <h2>How Thomas Sharps Works</h2>
+    <p style="max-width:640px;margin:1rem auto 0;color:#666;">Our proven four-step process gets your roof rejuvenated in just a couple of hours — no disruption, no mess, no stress.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Reach Out</h3>
+        <p>Call us or fill out our online form. We'll connect you with a local Thomas Sharps specialist to discuss your needs.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Free Assessment</h3>
+        <p>Our team inspects your roof in person to confirm it's a good candidate and identifies any issues to address.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Roof Tune-Up</h3>
+        <p>We clear debris, replace damaged shingles, and seal vulnerable areas to prepare your roof for treatment.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <h3>Application</h3>
+        <p>Our plant-based rejuvenating treatment is applied, restoring flexibility and waterproofing in just a couple of hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= BENEFITS ========================= -->
+<section class="benefits" id="benefits">
+  <div class="container text-center">
+    <span class="section-tag">Why Choose Us</span>
+    <h2>The Smart Alternative to Replacement</h2>
+    <p style="max-width:640px;margin:1rem auto 0;color:#666;">Day and night, natural oils in your asphalt allow shingles to expand and contract as they protect your home. After years of sun and weather, those oils evaporate. That's where Thomas Sharps comes in.</p>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C3 8 17 8 17 8z"/></svg>
+        </div>
+        <h3>100% Plant-Based</h3>
+        <p>Our all-natural, plant-based oil restores flexibility in aging shingles, making them act like new again. Safe for people, pets, plants, and the planet.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V1l-9 0zm0 6c1.4 0 2.8 1.1 2.8 2.5V11c.6 0 1.2.6 1.2 1.5v3.5c0 .6-.6 1.2-1.5 1.2H9.5c-.9 0-1.5-.6-1.5-1.5v-3.5c0-.9.6-1.5 1.2-1.5V9.5C9.2 8.1 10.6 7 12 7zm0 1c-.83 0-1.5.67-1.5 1.5V11h3V9.5c0-.83-.67-1.5-1.5-1.5z"/></svg>
+        </div>
+        <h3>Save Up to 80%</h3>
+        <p>Why pay tens of thousands for a replacement when you can restore your roof for a fraction of the cost? Add up to 15 years with treatments every 5 years.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M16.5 3.5L2 17l1.5 1.5L18 5z M22 9l-1.5-1.5L9 19l1.5 1.5L22 9z M12 22l1.5-1.5L3 11 1.5 12.5 12 22z"/></svg>
+        </div>
+        <h3>Backed by Science</h3>
+        <p>Ohio State University tests proved that shingles restored with Thomas Sharps pass the same flexibility tests required for brand-new shingles.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 9c2.7 0 5.8 1.29 6 2v1H6v-.99c.2-.72 3.3-2.01 6-2.01M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/></svg>
+        </div>
+        <h3>5-Year Guarantee</h3>
+        <p>Every treatment comes with a fully transferable 5-year warranty. Sell your home? The warranty goes with it, adding value to your sale.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+        </div>
+        <h3>Eco-Friendly</h3>
+        <p>Each application saves 3.8 tons of waste from landfills and reduces CO2 emissions by over 1,500 kilograms. Lower your carbon footprint while saving money.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <h3>Quick & Non-Disruptive</h3>
+        <p>The entire process takes just a couple of hours. No construction, no dumpsters, no noise — just a beautiful, restored roof.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= COMPARISON ========================= -->
+<section class="comparison" id="comparison">
+  <div class="container text-center">
+    <span class="section-tag">See the Difference</span>
+    <h2>Repair vs. Replace vs. Restore</h2>
+    <p style="max-width:640px;margin:1rem auto 0;color:#666;">Don't replace your roof prematurely. See how roof restoration compares to traditional options.</p>
+    <div class="comparison-table">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Repair</th>
+            <th>Replacement</th>
+            <th class="highlight">Thomas Sharps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cost</td>
+            <td><span class="price-tag">$$</span></td>
+            <td><span class="price-tag">$$$$$</span></td>
+            <td class="highlight-col"><span class="price-tag savings">Up to 80% Less</span></td>
+          </tr>
+          <tr>
+            <td>Lifespan Impact</td>
+            <td>Short-term fix</td>
+            <td>New roof lifespan</td>
+            <td class="highlight-col">Adds 5–15 years</td>
+          </tr>
+          <tr>
+            <td>Disruption</td>
+            <td>Low</td>
+            <td><span class="x-mark">&#10007;</span> High (major construction)</td>
+            <td class="highlight-col"><span class="check">&#10003;</span> Minimal</td>
+          </tr>
+          <tr>
+            <td>Eco-Friendly</td>
+            <td>Medium</td>
+            <td><span class="x-mark">&#10007;</span> Landfill waste</td>
+            <td class="highlight-col"><span class="check">&#10003;</span> 100% plant-based</td>
+          </tr>
+          <tr>
+            <td>Addresses Aging Oils</td>
+            <td><span class="x-mark">&#10007;</span> No</td>
+            <td><span class="check">&#10003;</span> Yes (new shingles)</td>
+            <td class="highlight-col"><span class="check">&#10003;</span> Yes (rejuvenates)</td>
+          </tr>
+          <tr>
+            <td>Transferable Warranty</td>
+            <td><span class="x-mark">&#10007;</span></td>
+            <td>Varies</td>
+            <td class="highlight-col"><span class="check">&#10003;</span> 5-Year Transferable</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= TESTIMONIAL ========================= -->
+<section class="testimonial" id="reviews">
+  <div class="container">
+    <div class="testimonial-content">
+      <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <span class="testimonial-quote-mark">&ldquo;</span>
+      <p class="testimonial-text">I was skeptical at first with the condition of the roofs, because shingles were blowing off in high winds. Five years later, after the application, the roofs look great with no issues.</p>
+      <div class="testimonial-author">[TESTIMONIAL NAME]</div>
+      <div class="testimonial-role">Head of Construction Management, Thomas Sharps Real Estate Partners</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= STATS ========================= -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number">4.9&#9733;</span>
+        <span class="stat-label">Average Rating</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">13,000+</span>
+        <span class="stat-label">Reviews</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">600+</span>
+        <span class="stat-label">Cities Served</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">15</span>
+        <span class="stat-label">Years Added (Max)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= WARRANTY ========================= -->
+<section class="warranty" id="warranty">
+  <div class="container">
+    <div class="warranty-inner">
+      <div class="warranty-text">
+        <span class="section-tag">Peace of Mind</span>
+        <h2>5-Year Transferable Warranty</h2>
+        <p>With our five-year, transferable warranty, you'll enjoy the peace of mind that your roof and entire home are protected. Each treatment adds up to five years of life to your roof — and many roofs can be treated up to three times for a total of 15 additional years.</p>
+        <p>Selling your home? The warranty transfers to the new owner, adding value and buyer confidence to your sale.</p>
+        <div class="warranty-features">
+          <div class="warranty-feature">
+            <div class="warranty-check">&#10003;</div>
+            <span>Guaranteed effectiveness for 5 full years per treatment</span>
+          </div>
+          <div class="warranty-feature">
+            <div class="warranty-check">&#10003;</div>
+            <span>Fully transferable to new homeowners if you sell</span>
+          </div>
+          <div class="warranty-feature">
+            <div class="warranty-check">&#10003;</div>
+            <span>Backed by our nationwide network of 600+ dealers</span>
+          </div>
+          <div class="warranty-feature">
+            <div class="warranty-check">&#10003;</div>
+            <span>Eligible for re-treatment every 5 years (up to 3 times)</span>
+          </div>
+        </div>
+      </div>
+      <div class="warranty-image">
+        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800&q=80" alt="Professional roof restoration technician applying treatment to asphalt shingles">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FINAL CTA ========================= -->
+<section class="final-cta" id="estimate">
+  <div class="container">
+    <span class="section-tag" style="color:var(--green-light);">Get Started Today</span>
+    <h2>Ready to Save Your Roof?</h2>
+    <p>Connect with a locally-owned Thomas Sharps contractor to get a FREE assessment and estimate. Find out how much you can save with roof rejuvenation.</p>
+    <a href="tel:[PHONE]" class="btn btn-primary btn-large">Call [PHONE]</a>
+    <br><br>
+    <a href="#" class="btn btn-outline btn-large">Get My Free Estimate</a>
+  </div>
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Thomas Sharps<span>NAME</span></div>
+        <p>America's most trusted roofer&trade;. Our plant-based roof rejuvenation treatment restores your asphalt shingles, saving you up to 80% vs. replacement.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#warranty">Warranty</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Cost Calculator</a></li>
+          <li><a href="#">Restoration Guide</a></li>
+          <li><a href="#">Learning Hub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <p><strong>Phone:</strong> [PHONE]</p>
+        <p><strong>Email:</strong> [EMAIL]</p>
+        <p><strong>Service Area:</strong> [CITY], [STATE] & Surrounding Areas</p>
+        <p><strong>Hours:</strong> Mon–Sat, 8AM–6PM</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Thomas Sharps. All rights reserved. | America's Most Trusted Roofer&trade; is a trademark of Thomas Sharps.</p>
+  </div>
+</footer>
+
+<!-- ========================= MOBILE NAV JS ========================= -->
+<script>
+document.getElementById('navToggle').addEventListener('click', function() {
+  var nav = document.getElementById('mainNav');
+  nav.classList.toggle('active');
+});
+// Close mobile nav on link click
+document.querySelectorAll('#mainNav a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    document.getElementById('mainNav').classList.remove('active');
+  });
+});
+</script>
+
+</body>
+</html>
